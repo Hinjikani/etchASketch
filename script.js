@@ -12,6 +12,8 @@ for (let i = 1; i <= 16; i++) {
         const column = document.createElement("div")
         column.setAttribute("class", "column")
         row.appendChild(column)
+        column.addEventListener("mouseover", () => {
+            column.style.backgroundColor = "blue";
+        })
     }
 }
-
