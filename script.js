@@ -45,7 +45,14 @@ gridResize.addEventListener("click", () => {
     while (getWidth > 100) {
         getWidth = prompt("Please enter width size", "limited to 100")
     }
-    
+    if (getHeight === null && getWidth === null) {
+        getHeight = 16
+        getWidth = 16
+    } else if (getHeight === null) {
+        getHeight = 16
+    } else if (getWidth === null) {
+        getWidth = 16
+    }
     removeContainer()
     createGrid(getHeight, getWidth)
 })
